@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Objet 3D By Lisandrù</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+        body { font-family: 'Poppins', sans-serif; }
+        .hero-bg {
+            background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('https://picsum.photos/id/1015/1920/1080');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-zinc-950 text-white">
+
+    <nav class="bg-black border-b border-cyan-500 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3">
+                <i class="fa-solid fa-cube text-4xl text-cyan-400"></i>
+                <div>
+                    <h1 class="text-3xl font-bold">MON OBJET 3D</h1>
+                    <p class="text-cyan-400 text-sm -mt-1">By Lisandrù</p>
+                </div>
+            </a>
+
+            <div class="hidden md:flex gap-8 text-lg">
+                <a href="commandes.html">Commandes</a>
+                <a href="vitrine.html">Vitrine</a>
+                <a href="infos.html">Informations</a>
+            </div>
+
+            <button id="burger-btn" class="md:hidden text-4xl">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-black border-t border-cyan-500 py-8">
+            <div class="flex flex-col items-center gap-8 text-2xl">
+                <a href="commandes.html">Commandes</a>
+                <a href="vitrine.html">Vitrine</a>
+                <a href="infos.html">Informations</a>
+                <a href="messagerie.html">Messagerie</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-bg h-screen flex items-center justify-center text-center px-6">
+        <div>
+            <h2 class="text-6xl md:text-7xl font-bold mb-6">Mon Objet 3D By Lisandrù</h2>
+            <p class="text-2xl text-cyan-100 mb-10">Impression 3D artisanale • Sur mesure</p>
+            <a href="commandes.html" class="bg-cyan-500 text-black font-bold text-2xl px-12 py-6 rounded-2xl inline-block hover:bg-cyan-400">
+                Passer commande
+            </a>
+        </div>
+    </header>
+
+    <footer class="bg-black py-12 text-center">
+        <p class="text-cyan-400">© 2026 Mon Objet 3D By Lisandrù</p>
+    </footer>
+
+    <script>
+        document.getElementById('burger-btn').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

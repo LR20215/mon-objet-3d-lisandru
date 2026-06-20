@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informations - Mon Objet 3D By Lisandrù</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+        body { font-family: 'Poppins', sans-serif; }
+    </style>
+</head>
+<body class="bg-zinc-950 text-white">
+
+    <nav class="bg-black border-b border-cyan-500 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3">
+                <i class="fa-solid fa-cube text-4xl text-cyan-400"></i>
+                <div>
+                    <h1 class="text-3xl font-bold">MON OBJET 3D</h1>
+                    <p class="text-cyan-400 text-sm -mt-1">By Lisandrù</p>
+                </div>
+            </a>
+
+            <div class="hidden md:flex gap-8 text-lg">
+                <a href="vitrine.html">Vitrine</a>
+                <a href="infos.html" class="text-cyan-400">Informations</a>
+                <a href="commande.html">Commande</a>
+            </div>
+
+            <button id="burger-btn" class="md:hidden text-4xl">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-black border-t border-cyan-500 py-8">
+            <div class="flex flex-col items-center gap-8 text-2xl">
+                <a href="vitrine.html">Vitrine</a>
+                <a href="infos.html" class="text-cyan-400">Informations</a>
+                <a href="commande.html">Commande</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="py-24 bg-zinc-900">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-5xl font-bold text-center mb-16 text-cyan-400">Informations Importantes</h2>
+            
+            <div class="space-y-12">
+
+                <!-- Livraison -->
+                <div class="bg-zinc-800 rounded-3xl p-10">
+                    <h3 class="text-3xl font-semibold mb-6 flex items-center gap-3">
+                        <i class="fa-solid fa-truck text-cyan-400"></i> 
+                        Livraison
+                    </h3>
+                    <ul class="text-xl space-y-6">
+                        <li class="flex items-start gap-4">
+                            <span class="text-cyan-400 mt-1">•</span>
+                            <strong>Livraison uniquement en France</strong>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <span class="text-cyan-400 mt-1">•</span>
+                            <strong>Commande minimum :</strong> 5 €
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <span class="text-cyan-400 mt-1">•</span>
+                            Frais de livraison <strong>payants</strong> pour les commandes entre <strong>5€ et 50€</strong>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <span class="text-cyan-400 mt-1">•</span>
+                            <strong>Livraison gratuite</strong> à partir de <strong>50€</strong> d’achat
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Tarifs -->
+                <div class="bg-zinc-800 rounded-3xl p-10">
+                    <h3 class="text-3xl font-semibold mb-6 flex items-center gap-3">
+                        <i class="fa-solid fa-euro-sign text-cyan-400"></i> 
+                        Tarifs
+                    </h3>
+                    <p class="text-xl leading-relaxed">
+                        Tous les tarifs sont <strong>selon le projet</strong>.<br><br>
+                        Envoie ta demande via la page Commande, je te ferai un devis personnalisé rapidement.
+                    </p>
+                </div>
+
+                <!-- Paiement -->
+                <div class="bg-zinc-800 rounded-3xl p-10">
+                    <h3 class="text-3xl font-semibold mb-6 flex items-center gap-3">
+                        <i class="fa-solid fa-shield-halved text-cyan-400"></i> 
+                        Paiement & Garantie
+                    </h3>
+                    <p class="text-xl leading-relaxed">
+                        Paiement uniquement via <strong>PayPal</strong> avant la conception.<br><br>
+                        <strong class="text-amber-400">Remboursement total possible</strong> si l’impression est ratée au dernier moment.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black py-12 text-center border-t border-zinc-800">
+        <p class="text-cyan-400">© 2026 Mon Objet 3D By Lisandrù</p>
+    </footer>
+
+    <script>
+        document.getElementById('burger-btn').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

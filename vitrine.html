@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitrine - Mon Objet 3D By Lisandrù</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+        body { font-family: 'Poppins', sans-serif; }
+        .gallery-img {
+            transition: all 0.4s ease;
+        }
+        .gallery-img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.5);
+        }
+    </style>
+</head>
+<body class="bg-zinc-950 text-white">
+
+    <nav class="bg-black border-b border-cyan-500 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3">
+                <i class="fa-solid fa-cube text-4xl text-cyan-400"></i>
+                <div>
+                    <h1 class="text-3xl font-bold">MON OBJET 3D</h1>
+                    <p class="text-cyan-400 text-sm -mt-1">By Lisandrù</p>
+                </div>
+            </a>
+
+            <div class="hidden md:flex gap-8 text-lg">
+                <a href="vitrine.html" class="text-cyan-400">Vitrine</a>
+                <a href="infos.html">Informations</a>
+                <a href="commande.html">Commande</a>
+            </div>
+
+            <button id="burger-btn" class="md:hidden text-4xl">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-black border-t border-cyan-500 py-8">
+            <div class="flex flex-col items-center gap-8 text-2xl">
+                <a href="vitrine.html" class="text-cyan-400">Vitrine</a>
+                <a href="infos.html">Informations</a>
+                <a href="commande.html">Commande</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="py-24 bg-black">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-5xl font-bold text-center mb-6">Vitrine</h2>
+            <p class="text-center text-zinc-400 max-w-3xl mx-auto text-lg mb-16">
+                Voici quelques exemples de modèles déjà imprimés.<br>
+                <strong>Attention :</strong> Tous les modèles ne sont pas représentés ici. 
+                Les objets réels peuvent être légèrement différents une fois imprimés.
+            </p>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <img src="https://i.etsystatic.com/10574163/r/il/c735d3/4074531034/il_570xN.4074531034_mevf.jpg" alt="Modèle 3D" class="gallery-img w-full aspect-square object-cover rounded-3xl">
+                <img src="https://fr.anycubic.com/cdn/shop/files/PLA_Galaxy_Model_923b95c2-b804-41ee-a69a-25ca0d435a1e.jpg?v=1758276347&width=1500" alt="Modèle 3D" class="gallery-img w-full aspect-square object-cover rounded-3xl">
+                <img src="https://fr.anycubic.com/cdn/shop/files/pla-slik-model.jpg?v=1769745609" alt="Modèle 3D" class="gallery-img w-full aspect-square object-cover rounded-3xl">
+                <img src="https://www.3dnatives.com/wp-content/uploads/2018/12/Buggy.jpg" alt="Modèle 3D" class="gallery-img w-full aspect-square object-cover rounded-3xl">
+                <img src="https://image.made-in-china.com/202f0j00MJvlDYnLAopu/Factory-Supplies-Custom-3D-Printing-SLS-PLA-3D-Printer-Toy-Fish-Model.webp" alt="Modèle 3D" class="gallery-img w-full aspect-square object-cover rounded-3xl">
+                <img src="https://www.prusa3d.com/cdn-cgi/image/width=1024,format=auto,quality=85/content/images/product/a18c2f10-1ad3-4ecf-a30e-ace882da5204.jpg" alt="Modèle 3D" class="gallery-img w-full aspect-square object-cover rounded-3xl">
+                <img src="https://www.makershop.fr/cdn/shop/files/12189.jpg?v=1764844000&width=800" alt="Modèle 3D" class="gallery-img w-full aspect-square object-cover rounded-3xl">
+                <img src="https://picsum.photos/id/870/600/600" alt="Modèle 3D" class="gallery-img w-full aspect-square object-cover rounded-3xl">
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black py-12 text-center border-t border-zinc-800">
+        <p class="text-cyan-400">© 2026 Mon Objet 3D By Lisandrù</p>
+    </footer>
+
+    <script>
+        document.getElementById('burger-btn').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

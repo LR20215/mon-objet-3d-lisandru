@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commande - Mon Objet 3D By Lisandrù</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+        body { font-family: 'Poppins', sans-serif; }
+    </style>
+</head>
+<body class="bg-zinc-950 text-white">
+
+    <nav class="bg-black border-b border-cyan-500 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3">
+                <i class="fa-solid fa-cube text-4xl text-cyan-400"></i>
+                <div>
+                    <h1 class="text-3xl font-bold">MON OBJET 3D</h1>
+                    <p class="text-cyan-400 text-sm -mt-1">By Lisandrù</p>
+                </div>
+            </a>
+
+            <div class="hidden md:flex gap-8 text-lg">
+                <a href="vitrine.html">Vitrine</a>
+                <a href="infos.html">Informations</a>
+                <a href="commande.html" class="text-cyan-400">Commande</a>
+            </div>
+
+            <button id="burger-btn" class="md:hidden text-4xl">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-black border-t border-cyan-500 py-8">
+            <div class="flex flex-col items-center gap-8 text-2xl">
+                <a href="vitrine.html">Vitrine</a>
+                <a href="infos.html">Informations</a>
+                <a href="commande.html" class="text-cyan-400">Commande</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="py-24 bg-black">
+        <div class="max-w-2xl mx-auto px-6">
+            <h2 class="text-5xl font-bold text-center mb-6">Commande</h2>
+            <p class="text-center text-zinc-400 text-lg mb-12">
+                Décris-moi ton projet en détail, je te ferai un devis personnalisé rapidement !
+            </p>
+
+            <form action="https://formspree.io/f/xldggnqa" method="POST" class="space-y-8 bg-zinc-900 p-10 rounded-3xl">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm mb-2 text-zinc-400">Prénom</label>
+                        <input type="text" name="prenom" required 
+                               class="w-full bg-zinc-800 border border-zinc-700 rounded-2xl px-6 py-4 focus:outline-none focus:border-cyan-500">
+                    </div>
+                    <div>
+                        <label class="block text-sm mb-2 text-zinc-400">Nom</label>
+                        <input type="text" name="nom" required 
+                               class="w-full bg-zinc-800 border border-zinc-700 rounded-2xl px-6 py-4 focus:outline-none focus:border-cyan-500">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-sm mb-2 text-zinc-400">Email</label>
+                    <input type="email" name="email" placeholder="ton.email@example.com" required 
+                           class="w-full bg-zinc-800 border border-zinc-700 rounded-2xl px-6 py-4 focus:outline-none focus:border-cyan-500">
+                </div>
+
+                <div>
+                    <label class="block text-sm mb-2 text-zinc-400">Adresse complète</label>
+                    <textarea name="adresse" rows="3" placeholder="Nom de rue, numéro, code postal, ville, pays..." required
+                              class="w-full bg-zinc-800 border border-zinc-700 rounded-3xl px-6 py-5 focus:outline-none focus:border-cyan-500"></textarea>
+                </div>
+
+                <div>
+                    <label class="block text-sm mb-2 text-zinc-400">Objet / Description courte</label>
+                    <input type="text" name="objet" placeholder="Ex: Figurine de personnage, support téléphone..." required 
+                           class="w-full bg-zinc-800 border border-zinc-700 rounded-2xl px-6 py-4 focus:outline-none focus:border-cyan-500">
+                </div>
+
+                <div>
+                    <label class="block text-sm mb-2 text-zinc-400">Description détaillée du projet</label>
+                    <textarea name="description" rows="8" placeholder="Dimensions, couleurs souhaitées, style, nombre d'exemplaires, etc." required
+                              class="w-full bg-zinc-800 border border-zinc-700 rounded-3xl px-6 py-5 focus:outline-none focus:border-cyan-500"></textarea>
+                </div>
+
+                <button type="submit" 
+                        class="w-full bg-cyan-500 hover:bg-cyan-400 text-black font-bold text-xl py-6 rounded-3xl transition-all">
+                    Envoyer ma demande de commande
+                </button>
+            </form>
+
+            <p class="text-center text-xs text-zinc-500 mt-8">
+                Paiement sécurisé via PayPal après acceptation du devis
+            </p>
+        </div>
+    </section>
+
+    <footer class="bg-black py-12 text-center border-t border-zinc-800">
+        <p class="text-cyan-400">© 2026 Mon Objet 3D By Lisandrù</p>
+    </footer>
+
+    <script>
+        document.getElementById('burger-btn').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
